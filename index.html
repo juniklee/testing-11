@@ -86,6 +86,19 @@
         <div id="unity-build-title">My project-junix</div>
     </div>
     </div>
+
+<!-- 모달영역-->
+    <div class="modal">
+        <div class="modal_body"> <img src="./image/그룹 210.png">
+          <button class = "Close-btn"><img src="./image/close.png"></button>
+        </div>
+      </div>
+      <button class="btn-open-popup">Modal 띄우기</button>
+      <div>
+
+
+
+
 </section>
 <script>
     var container = document.querySelector("#unity-container");
@@ -180,6 +193,26 @@
     });
     };
     document.body.appendChild(script);
+
+ /*모달JS*/
+    const body = document.querySelector('body');
+      const Close = document.querySelector('.Close-btn');
+      const modal = document.querySelector('.modal');
+      const btnOpenPopup = document.querySelector('.btn-open-popup');
+
+      btnOpenPopup.addEventListener('click', () => {
+        modal.classList.toggle('show');
+        // 오버플로우 시에도 창이 닫힘 
+      });
+
+       // 엑스표 창 닫기 
+      Close.addEventListener('click', () => {
+        modal.classList.toggle('show');
+      });
+      
+      modal.addEventListener('click', (event) => {
+      });
+
 </script>
 </body>
 </html>
